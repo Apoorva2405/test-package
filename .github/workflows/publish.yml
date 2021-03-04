@@ -23,12 +23,13 @@ jobs:
         with:
           node-version: 12
           always-auth: true
+          registry-url: 'https://npm.pkg.github.com'
       - run: |
           npm install
           npm test
       - name: publish all packages
         run: yarn publish --all
         env:
-          token: ${{ secrets.AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.AUTH_TOKEN }}
           tag: ${{ github.event.inputs.tag }}
           access: 'public'
