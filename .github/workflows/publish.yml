@@ -28,8 +28,10 @@ jobs:
           npm install
           npm test
       - name: publish all packages
-        run: yarn publish --all
+        run: |
+          echo @OWNER:registry=https://npm.pkg.github.com/ >> .npmrc
+          yarn publish --all
         env:
-          GITHUB_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           tag: ${{ github.event.inputs.tag }}
           access: 'public'
