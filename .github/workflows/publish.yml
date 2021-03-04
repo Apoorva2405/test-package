@@ -28,6 +28,6 @@ jobs:
       - name: publish all packages
         run: yarn publish --all
         env:
-          token: f5baf4bc50a1c4ed35439aac5d044b53e801fa9a
+          token: ${{ secrets.AUTH_TOKEN }}
           tag: ${{ github.event.inputs.tag }}
           access: 'public'
