@@ -26,7 +26,7 @@ jobs:
           npm install
           npm test
       - name: publish all packages
-        run: yarn publish:all
+        run: yarn publish --all
         env:
           token: f5baf4bc50a1c4ed35439aac5d044b53e801fa9a
           tag: ${{ github.event.inputs.tag }}
