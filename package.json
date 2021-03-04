@@ -1,0 +1,24 @@
+{
+  "name": "test-package",
+  "version": "1.1.0",
+  "description": "A simple npm package to demonstrate mono repo and GitHub Package Registry",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": []
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apoorva2405/test-package.git"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/Apoorva2405/test-package.git",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/Apoorva2405"
+  }
+}

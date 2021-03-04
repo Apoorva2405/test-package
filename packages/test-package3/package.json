@@ -1,0 +1,16 @@
+{
+  "name": "@apoorva2405/test-package3",
+  "version": "1.2.0",
+  "main": "main/index.js",
+  "author": "Adobe Inc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apoorva2405/test-package.git"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/Apoorva2405/test-package.git",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/Apoorva2405"
+  }
+
+}
