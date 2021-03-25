@@ -17,12 +17,11 @@ const fs = require("fs");
 function archiveElectronApp() {
     let uxpDevtoolAppDir =  require.resolve("@apoorva2405/uxp-devtools-app/package.json");
     uxpDevtoolAppDir = path.dirname(uxpDevtoolAppDir);
-    const baseFolder = path.resolve(uxpDevtoolAppDir, "dist");
     process.chdir(uxpDevtoolAppDir);
 
     execSync("zip dist.zip dist -r && rm -rf dist", {
         cwd: uxpDevtoolAppDir,
-        stdio: [ "inherit", "inherit", "inherit" ],
+        // stdio: [ "inherit", "inherit", "inherit" ],
         maxBuffer: 1024 * 1024 * 100
     });
 
