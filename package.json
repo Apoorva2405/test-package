@@ -1,7 +1,7 @@
 {
   "name": "@apoorva2405/test-package",
   "version": "1.1.0",
-  "description": "A simple npm package to demonstrate mono repo and GitHub Package Registry",
+  "description": "A simple npm package to demonstrate mono repo and npm Package Registry",
   "main": "index.js",
   "workspaces": {
     "packages": [
