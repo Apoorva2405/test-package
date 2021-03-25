@@ -29,7 +29,8 @@ jobs:
           npm test
       - name: publish all packages
         run: |
-          echo @OWNER:registry=https://npm.pkg.github.com/ >> .npmrc
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "<@OWNER>"
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
