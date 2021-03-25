@@ -1,6 +1,6 @@
 {
   "name": "@apoorva2405/uxp-devtools-cli",
-  "version": "1.2.0-beta",
+  "version": "1.2.1-beta",
   "description": "Command line interface for rapid UXP plugin development",
   "main": "src/uxp.js",
   "scripts": {
@@ -26,7 +26,6 @@
   "author": "Adobe Inc",
   "license": "Apache-2.0",
   "dependencies": {
-    "@apoorva2405/udt-app": "^1.2.2-test",
     "@apoorva2405/uxp-devtools-core": "^1.2.1-beta",
     "@apoorva2405/uxp-template-ps-starter": "^1.0.0",
     "@apoorva2405/uxp-template-default-starter": "^1.0.0",
