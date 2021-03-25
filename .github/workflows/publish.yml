@@ -30,5 +30,6 @@ jobs:
       - uses: author/action-publish@stable
         with:
           scan: "./packages"
+          ignore: "./packages/uxp-devtools-app"
         env:
           REGISTRY_TOKEN: ${{secrets.npm_token}}
