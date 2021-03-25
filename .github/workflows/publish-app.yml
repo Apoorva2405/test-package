@@ -40,4 +40,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
           WORKING_DIR: ./packages/uxp-devtools-app
-          NODE_OPTIONS: --max_old_space_size=4096
+          # NODE_OPTIONS: --max_old_space_size=4096
