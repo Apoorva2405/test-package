@@ -20,17 +20,19 @@ function archiveElectronApp() {
     const baseFolder = path.resolve(uxpDevtoolAppDir, "dist");
     process.chdir(uxpDevtoolAppDir);
 
-    execSync("zip dist.zip dist -r", {
+    execSync("zip dist.zip dist -r && rm -rf dist", {
         cwd: uxpDevtoolAppDir,
-        stdio: [ "inherit", "inherit", "inherit" ]
+        stdio: [ "inherit", "inherit", "inherit" ],
+        maxBuffer: 50 * 1024 * 1024
     });
 
-    if (fs.existsSync(baseFolder)) {
-        execSync("rm -rf dist", {
-            cwd: uxpDevtoolAppDir,
-            stdio: [ "inherit", "inherit", "inherit" ]
-        });
-    }
+    // if (fs.existsSync(baseFolder)) {
+    //     execSync("rm -rf dist", {
+    //         cwd: uxpDevtoolAppDir,
+    //         stdio: [ "inherit", "inherit", "inherit" ],
+    //         maxBuffer: 50 * 1024 * 1024
+    //     });
+    // }
 }
 
 archiveElectronApp();
