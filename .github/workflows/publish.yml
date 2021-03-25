@@ -28,4 +28,4 @@ jobs:
         with:
           scan: "./packages"
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          REGISTRY_TOKEN: ${{secrets.npm_token}}
