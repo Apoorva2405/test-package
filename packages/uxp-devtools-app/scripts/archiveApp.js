@@ -1,0 +1,36 @@
+/*
+Copyright 2020 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+const path = require("path");
+const { execSync } = require("child_process");
+const process = require("process");
+const fs = require("fs");
+
+function archiveElectronApp() {
+    let uxpDevtoolAppDir =  require.resolve("@apoorva2405/uxp-devtools-app/package.json");
+    uxpDevtoolAppDir = path.dirname(uxpDevtoolAppDir);
+    const baseFolder = path.resolve(uxpDevtoolAppDir, "dist");
+    process.chdir(uxpDevtoolAppDir);
+
+    execSync("zip dist.zip dist -r -m", {
+        cwd: uxpDevtoolAppDir,
+        stdio: [ "inherit", "inherit", "inherit" ]
+    });
+
+    if (fs.existsSync(baseFolder)) {
+        execSync("rm -rf dist", {
+            cwd: uxpDevtoolAppDir,
+            stdio: [ "inherit", "inherit", "inherit" ]
+        });
+    }
+}
+
+archiveElectronApp();

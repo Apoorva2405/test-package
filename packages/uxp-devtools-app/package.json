@@ -2,7 +2,7 @@
   "name": "@apoorva2405/uxp-devtools-app",
   "productName": "Adobe UXP Developer Tool",
   "appMenuName": "Adobe UXP Developer Tool",
-  "version": "1.2.5-test",
+  "version": "1.2.4-beta",
   "main": "main/index.js",
   "repository": {
     "type": "git",
@@ -17,8 +17,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development",
     "build-renderer": "yarn cleanup && cross-env NODE_ENV=production webpack",
     "package": "yarn build-renderer && electron-builder -mw --dir",
-    "cdt-custom-setup": "node scripts/cdt_inspect/cdtInspectPreSetup.js",
-    "postinstall": "yarn cdt-custom-setup &&  node scripts/installAppDeps.js"
+    "cdt-custom-setup": "node scripts/cdt_inspect/cdtInspectPreSetup.js"
   },
   "build": {
     "productName": "Adobe UXP Developer Tool",
