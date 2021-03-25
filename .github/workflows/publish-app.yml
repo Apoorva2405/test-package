@@ -10,9 +10,6 @@ on:
         description: 'The tag to publish to.'
         required: false
         default: 'latest'
-  defaults:
-  run:
-    working-directory: packages/uxp-devtools-app
 jobs:
   checkout:
     name: checkout
@@ -22,7 +19,7 @@ jobs:
       - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-        working-directory: 
+        working-directory: ${{env.WORKING_DIR}}
       - uses: actions/setup-node@v1
         with:
           node-version: 10
