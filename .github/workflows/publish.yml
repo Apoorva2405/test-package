@@ -23,7 +23,10 @@ jobs:
         with:
           node-version: 10
       - run: |
-          rm .npmrc && npm install
+          npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+          npm config set scope "@apoorva2405"
+          npm config list
+          npm install
       - uses: author/action-publish@stable
         with:
           scan: "./packages"
