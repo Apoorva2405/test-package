@@ -8,9 +8,6 @@
     "url": "git+https://github.com/Apoorva2405/test-package.git"
   },
   "license": "ISC",
-  "homepage": "https://github.com/Apoorva2405/test-package.git",
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/Apoorva2405"
-  }
+  "homepage": "https://github.com/Apoorva2405/test-package.git"
 
 }
