@@ -16,21 +16,21 @@ const process = require("process");
 const { createDeferredPromise } = require("./common");
 
 function getDevtoolsAppExecutablePath() {
-    let uxpDevtoolAppDir =  require.resolve("@apoorva2405/udt-app/package.json");
-    uxpDevtoolAppDir = path.dirname(uxpDevtoolAppDir);
+    // let uxpDevtoolAppDir =  require.resolve("@apoorva2405/udt-app/package.json");
+    // uxpDevtoolAppDir = path.dirname(uxpDevtoolAppDir);
 
-    const productName = "Adobe UXP Developer Tool";
-    const baseFolder = path.resolve(uxpDevtoolAppDir, "dist");
+    // const productName = "Adobe UXP Developer Tool";
+    // const baseFolder = path.resolve(uxpDevtoolAppDir, "dist");
 
-    let executablePath = "";
-    if (process.platform === "darwin") {
-        executablePath = `${baseFolder}/mac/${productName}.app/Contents/MacOS/${productName}`;
-    }
-    else if (process.platform === "win32") {
-        executablePath = `${baseFolder}/win-unpacked/${productName}.exe`;
-    }
+    // let executablePath = "";
+    // if (process.platform === "darwin") {
+    //     executablePath = `${baseFolder}/mac/${productName}.app/Contents/MacOS/${productName}`;
+    // }
+    // else if (process.platform === "win32") {
+    //     executablePath = `${baseFolder}/win-unpacked/${productName}.exe`;
+    // }
 
-    return executablePath;
+    // return executablePath;
 }
 
 function wrapArg(name, arg) {

@@ -1,6 +1,6 @@
 {
   "name": "@apoorva2405/uxp-devtools-cli",
-  "version": "1.2.1-beta",
+  "version": "1.2.1-test",
   "description": "Command line interface for rapid UXP plugin development",
   "main": "src/uxp.js",
   "scripts": {
