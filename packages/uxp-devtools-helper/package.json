@@ -1,0 +1,25 @@
+{
+  "name": "@apoorva2405/uxp-devtools-helper",
+  "version": "1.2.1-beta",
+  "description": "Adobe Devtools helper package used by uxp cli",
+  "main": "src/DevToolsHelper.js",
+  "scripts": {
+    "install": "node scripts/devtools_setup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.adobe.com:torq/uxp-developer-tools.git",
+    "directory": "packages/uxp-devtools-helper"
+  },
+  "keywords": [
+    "adobe",
+    "uxp"
+  ],
+  "author": "Adobe Inc",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fs-extra": "^9.0.0",
+    "node-gyp-build": "^4.2.3",
+    "tar": "^6.0.1"
+  }
+}

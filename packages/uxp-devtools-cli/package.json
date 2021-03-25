@@ -1,0 +1,47 @@
+{
+  "name": "@apoorva2405/uxp-devtools-cli",
+  "version": "1.2.0-beta",
+  "description": "Command line interface for rapid UXP plugin development",
+  "main": "src/uxp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uxp": "src/uxp.js",
+    "postinstall": "node scripts/installScript.js && node scripts/extractApp.js",
+    "cleanup": "node scripts/cleanup.js"
+  },
+  "bin": {
+    "uxp": "src/uxp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.corp.adobe.com:torq/uxp-developer-tools.git",
+    "directory": "packages/uxp-devtools-cli"
+  },
+  "keywords": [
+    "adobe",
+    "uxp",
+    "cli",
+    "plugin"
+  ],
+  "author": "Adobe Inc",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@apoorva2405/udt-app": "^1.2.2-test",
+    "@apoorva2405/uxp-devtools-core": "^1.2.1-beta",
+    "@apoorva2405/uxp-template-ps-starter": "^1.0.0",
+    "@apoorva2405/uxp-template-default-starter": "^1.0.0",
+    "@apoorva2405/uxp-template-default-starter-xd": "^1.0.0",
+    "@apoorva2405/uxp-template-default-starter-ps": "^1.0.0",
+    "@apoorva2405/uxp-template-ps-react-starter": "^1.0.0",
+    "@apoorva2405/uxp-template-ps-react-typescript": "^1.0.0",
+    "@apoorva2405/uxp-template-xd-starter": "^1.0.0",
+    "chalk": "^3.0.0",
+    "cli-table3": "^0.4.0",
+    "prompts": "^2.3.2",
+    "semver": "^7.3.2",
+    "yargs": "^15.3.1"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.corp.adobe.com/artifactory/api/npm/npm-torq-release-local/"
+  }
+}
