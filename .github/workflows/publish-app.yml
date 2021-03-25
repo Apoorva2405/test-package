@@ -22,7 +22,7 @@ jobs:
         working-directory: ${{env.WORKING_DIR}}
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 10
       - run: |
           npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
           npm config set scope "@apoorva2405"
