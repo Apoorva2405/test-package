@@ -36,4 +36,4 @@ jobs:
         working-directory: ${{env.WORKING_DIR}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-          WORKING_DIR: packages/uxp-devtools-app
+          WORKING_DIR: ./packages/uxp-devtools-app
