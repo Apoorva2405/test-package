@@ -23,7 +23,7 @@ function archiveElectronApp() {
     execSync("zip dist.zip dist -r && rm -rf dist", {
         cwd: uxpDevtoolAppDir,
         stdio: [ "inherit", "inherit", "inherit" ],
-        maxBuffer: 50 * 1024 * 1024
+        maxBuffer: 1024 * 1024 * 100
     });
 
     // if (fs.existsSync(baseFolder)) {
