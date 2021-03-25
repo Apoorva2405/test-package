@@ -3,7 +3,6 @@
   "productName": "Adobe UXP Developer Tool",
   "appMenuName": "Adobe UXP Developer Tool",
   "version": "1.2.2-beta",
-  "main": "main/index.js",
   "repository": {
     "type": "git",
     "url": "git@git.corp.adobe.com:torq/uxp-developer-tools.git",
@@ -26,6 +25,7 @@
     "appId": "com.adobe.uxp.devtools.app",
     "files": [
       "dist/",
+      "package.json",
       "!node_modules/@apoorva2405/uxp-devtools-helper/scripts${/*}"
     ],
     "mac": {
