@@ -33,8 +33,8 @@ jobs:
       - run: cd ./packages/uxp-devtools-app && yarn cdt-custom-setup &&  node scripts/installAppDeps.js
       - run: cd ./packages/uxp-devtools-app && yarn package 
         working-directory: ${{env.WORKING_DIR}}
-      - run: cd ./packages/uxp-devtools-app && zip dist.zip dist -r -m
-        working-directory: ${{env.WORKING_DIR}}
+      # - run: cd ./packages/uxp-devtools-app && zip dist.zip dist -r -m
+      #   working-directory: ${{env.WORKING_DIR}}
       - run: npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN && npm publish --access public
         working-directory: ${{env.WORKING_DIR}}
         env:
