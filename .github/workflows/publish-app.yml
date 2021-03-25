@@ -30,9 +30,9 @@ jobs:
         working-directory: ${{env.WORKING_DIR}}
       - run: yarn install
         working-directory: ${{env.WORKING_DIR}}
-      - run: yarn package
+      - run: cd ./packages/uxp-devtools-app && yarn package
         working-directory: ${{env.WORKING_DIR}}
-      - run: npm publish --access public
+      - run: cd ./packages/uxp-devtools-app && npm publish --access public
         working-directory: ${{env.WORKING_DIR}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
