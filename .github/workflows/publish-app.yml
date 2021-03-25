@@ -28,8 +28,9 @@ jobs:
           npm config set scope "@apoorva2405"
           npm config list
         working-directory: ${{env.WORKING_DIR}}
-      - run: yarn install
+      - run: cd ./packages/uxp-devtools-app && yarn install
         working-directory: ${{env.WORKING_DIR}}
+      - run: cd ./packages/uxp-devtools-app && yarn cdt-custom-setup &&  node scripts/installAppDeps.js
       - run: cd ./packages/uxp-devtools-app && yarn package
         working-directory: ${{env.WORKING_DIR}}
       - run: cd ./packages/uxp-devtools-app && npm publish --access public
