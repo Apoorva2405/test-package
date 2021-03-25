@@ -31,8 +31,6 @@ jobs:
           npm config set scope "@apoorva2405"
           npm config list
         working-directory: ${{env.WORKING_DIR}}
-      - run: yarn install
-        working-directory: ${{env.WORKING_DIR}}
       - run: yarn package
         working-directory: ${{env.WORKING_DIR}}
       - run: npm publish --access public
