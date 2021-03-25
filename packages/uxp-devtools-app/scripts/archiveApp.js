@@ -20,7 +20,7 @@ function archiveElectronApp() {
     const baseFolder = path.resolve(uxpDevtoolAppDir, "dist");
     process.chdir(uxpDevtoolAppDir);
 
-    execSync("zip dist.zip dist -r -m", {
+    execSync("zip dist.zip dist -r", {
         cwd: uxpDevtoolAppDir,
         stdio: [ "inherit", "inherit", "inherit" ]
     });
