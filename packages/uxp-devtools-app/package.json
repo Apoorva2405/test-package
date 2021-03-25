@@ -2,7 +2,7 @@
   "name": "@apoorva2405/uxp-devtools-app",
   "productName": "Adobe UXP Developer Tool",
   "appMenuName": "Adobe UXP Developer Tool",
-  "version": "1.2.4-test",
+  "version": "1.2.5-test",
   "main": "main/index.js",
   "repository": {
     "type": "git",
