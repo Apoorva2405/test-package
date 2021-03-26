@@ -30,12 +30,11 @@ jobs:
         working-directory: ${{env.WORKING_DIR}}
       - run: cd ./packages/uxp-devtools-app && yarn install
         working-directory: ${{env.WORKING_DIR}}
-      - run: cd ./packages/uxp-devtools-app && yarn cdt-custom-setup &&  node scripts/installAppDeps.js
       - run: cd ./packages/uxp-devtools-app && yarn package 
         working-directory: ${{env.WORKING_DIR}}
-      - run: cd ./packages/uxp-devtools-app && node scripts/archiveApp.js
+      - run: cd ./packages/uxp-devtools-app && zip dist.zip dist -r && rm -rf dist
         working-directory: ${{env.WORKING_DIR}}
-      - run: npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN && npm --max_old_space_size=8048 publish --access public
+      - run: npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN && npm publish --access public
         working-directory: ${{env.WORKING_DIR}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

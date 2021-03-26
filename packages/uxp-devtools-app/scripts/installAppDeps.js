@@ -27,7 +27,7 @@ function installElectronAppDeps() {
     uxpDevtoolAppDir = path.dirname(uxpDevtoolAppDir);
     process.chdir(uxpDevtoolAppDir);
 
-    execSync("zip dist.zip dist -r -m", {
+    execSync("yarn electron-builder install-app-deps", {
         cwd: uxpDevtoolAppDir,
         stdio: [ "inherit", "inherit", "inherit" ]
     });

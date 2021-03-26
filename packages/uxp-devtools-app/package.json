@@ -16,8 +16,9 @@
     "start-main-dev": "cross-env NODE_ENV=development electron ./main/index.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development",
     "build-renderer": "yarn cleanup && cross-env NODE_ENV=production webpack",
-    "package": "yarn build-renderer && electron-builder -mw --dir",
-    "cdt-custom-setup": "node scripts/cdt_inspect/cdtInspectPreSetup.js"
+    "package": "yarn setup && yarn build-renderer && electron-builder -mw --dir",
+    "cdt-custom-setup": "node scripts/cdt_inspect/cdtInspectPreSetup.js",
+    "setup": "yarn cdt-custom-setup &&  node scripts/installAppDeps.js"
   },
   "build": {
     "productName": "Adobe UXP Developer Tool",
