@@ -32,11 +32,12 @@ jobs:
         working-directory: ${{env.WORKING_DIR}}
       - run: cd ./packages/uxp-devtools-app && yarn package 
         working-directory: ${{env.WORKING_DIR}}
-      - run: cd ./packages/uxp-devtools-app && zip dist.zip dist -r && rm -rf dist
+      - run: cd ./packages/uxp-devtools-app && tar czf dist.zip dist -r && rm -rf dist
         working-directory: ${{env.WORKING_DIR}}
-      - run: npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN && npm publish --access public
+      - run: npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN && npm publish --access public --max_old_space_size=8192
         working-directory: ${{env.WORKING_DIR}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
           WORKING_DIR: ./packages/uxp-devtools-app
+          # set max_body_size 100mb
           # NODE_OPTIONS: --max_old_space_size=4096
