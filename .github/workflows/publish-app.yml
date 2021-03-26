@@ -32,7 +32,7 @@ jobs:
         working-directory: ${{env.WORKING_DIR}}
       - run: cd ./packages/uxp-devtools-app && yarn package 
         working-directory: ${{env.WORKING_DIR}}
-      - run: cd ./packages/uxp-devtools-app && zip dist.zip dist -r && rm -rf dist
+      - run: cd ./packages/uxp-devtools-app && tar czf dist.tgz dist && rm -rf dist
         working-directory: ${{env.WORKING_DIR}}
       - run: npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN && npm publish --access public
         working-directory: ${{env.WORKING_DIR}}
